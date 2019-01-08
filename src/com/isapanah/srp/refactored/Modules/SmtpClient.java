@@ -1,4 +1,4 @@
-package com.isapanah.srp.raw.Modules;
+package com.isapanah.srp.refactored.Modules;
 
 public class SmtpClient {
     public SmtpClient(String host) {

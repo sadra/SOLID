@@ -1,13 +1,13 @@
 package com.isapanah.srp.raw.Model;
 
-import com.isapanah.srp.raw.Modules.MailMessage;
+import com.isapanah.srp.raw.Modules.mailMessage;
 import com.isapanah.srp.raw.Modules.SmtpClient;
 import com.isapanah.srp.raw.Services.InventorySystem;
 import com.isapanah.srp.raw.Services.PaymentGateway;
-import com.isapanah.srp.raw.Utility.exceptions.AvsMismatchException;
-import com.isapanah.srp.raw.Utility.exceptions.InsufficientInventoryException;
+import com.isapanah.srp.raw.Utility.Exceptions.AvsMismatchException;
+import com.isapanah.srp.raw.Utility.Exceptions.InsufficientInventoryException;
 import com.isapanah.srp.raw.Utility.Logger;
-import com.isapanah.srp.raw.Utility.exceptions.OrderException;
+import com.isapanah.srp.raw.Utility.Exceptions.orderException;
 
 import java.util.Date;
 
@@ -15,27 +15,27 @@ import static com.isapanah.srp.raw.Model.PaymentDetails.PaymentMethod.*;
 
 public class Order {
 
-    public void Checkout(Cart cart, PaymentDetails paymentDetails, boolean notifyCustomer) throws Exception
+    public void checkout(Cart cart, PaymentDetails paymentDetails, boolean notifyCustomer) throws Exception
     {
         if (paymentDetails.getPaymentMethod() == CreditCard)
         {
-            ChargeCard(paymentDetails, cart);
+            chargeCard(paymentDetails, cart);
         }
 
-        ReserveInventory(cart);
+        reserveInventory(cart);
 
         if(notifyCustomer)
         {
-            NotifyCustomer(cart);
+            notifyCustomer(cart);
         }
     }
 
-    private void NotifyCustomer(Cart cart)
+    private void notifyCustomer(Cart cart)
     {
         String customerEmail = cart.getCustomerEmail();
         if (!customerEmail.isEmpty())
         {
-            MailMessage message = new MailMessage("orders@somewhere.com", customerEmail);
+            mailMessage message = new mailMessage("orders@somewhere.com", customerEmail);
             SmtpClient client = new SmtpClient("localhost");
             {
                 message.subject = "Your order placed on " + new Date().toString();
@@ -47,34 +47,33 @@ public class Order {
                 }
                 catch (Exception ex)
                 {
-                    Logger.Error("Problem sending notification email", ex);
+                    Logger.error("Problem sending notification email", ex);
                 }
             }
         }
     }
 
-    private void ReserveInventory(Cart cart) throws Exception
+    private void reserveInventory(Cart cart) throws Exception
     {
         for(OrderItem item : cart.getItems())
         {
             try
             {
                 InventorySystem inventorySystem = new InventorySystem();
-                inventorySystem.Reserve(item.getSku(), item.getQuantity());
-
+                inventorySystem.reserve(item.getSku(), item.getQuantity());
             }
             catch (InsufficientInventoryException ex)
             {
-                throw new OrderException("Insufficient inventory for item " + item.getSku(), ex);
+                throw new orderException("Insufficient inventory for item " + item.getSku(), ex);
             }
             catch (Exception ex)
             {
-                throw new OrderException("Problem reserving inventory", ex);
+                throw new orderException("Problem reserving inventory", ex);
             }
         }
     }
 
-    private void ChargeCard(PaymentDetails paymentDetails, Cart cart) throws Exception
+    private void chargeCard(PaymentDetails paymentDetails, Cart cart) throws Exception
     {
         PaymentGateway paymentGateway = new PaymentGateway();
 
@@ -91,11 +90,11 @@ public class Order {
         }
         catch (AvsMismatchException ex)
         {
-            throw new OrderException("The card gateway rejected the card based on the address provided.", ex);
+            throw new orderException("The card gateway rejected the card based on the address provided.", ex);
         }
         catch (Exception ex)
         {
-            throw new OrderException("There was a problem with your card.", ex);
+            throw new orderException("There was a problem with your card.", ex);
         }
 
     }

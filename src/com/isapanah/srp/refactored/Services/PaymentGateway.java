@@ -1,6 +1,6 @@
-package com.isapanah.srp.raw.Services;
+package com.isapanah.srp.refactored.Services;
 
-import com.isapanah.srp.raw.Utility.Exceptions.AvsMismatchException;
+import com.isapanah.srp.refactored.Utility.Exceptions.AvsMismatchException;
 
 public class PaymentGateway {
 

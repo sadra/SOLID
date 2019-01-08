@@ -1,4 +1,4 @@
-package com.isapanah.srp.raw.Utility.exceptions;
+package com.isapanah.srp.refactored.Utility.Exceptions;
 
 public class InsufficientInventoryException extends Exception {
 }

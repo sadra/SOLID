@@ -1,11 +1,11 @@
 package com.isapanah.srp.raw.Modules;
 
-public class MailMessage {
+public class mailMessage {
 
     public String subject;
     public String body;
 
-    public MailMessage(String s, String customerEmail) {
+    public mailMessage(String s, String customerEmail) {
         //TODO Create email message
     }
 }
