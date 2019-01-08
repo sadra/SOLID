@@ -4,10 +4,10 @@ import com.isapanah.srp.raw.Modules.MailMessage;
 import com.isapanah.srp.raw.Modules.SmtpClient;
 import com.isapanah.srp.raw.Services.InventorySystem;
 import com.isapanah.srp.raw.Services.PaymentGateway;
-import com.isapanah.srp.raw.Utility.AvsMismatchException;
-import com.isapanah.srp.raw.Utility.InsufficientInventoryException;
+import com.isapanah.srp.raw.Utility.exceptions.AvsMismatchException;
+import com.isapanah.srp.raw.Utility.exceptions.InsufficientInventoryException;
 import com.isapanah.srp.raw.Utility.Logger;
-import com.isapanah.srp.raw.Utility.OrderException;
+import com.isapanah.srp.raw.Utility.exceptions.OrderException;
 
 import java.util.Date;
 
