@@ -10,8 +10,8 @@ import com.isapanah.srp.refactored.Interfaces.IReservationService;
 public class ImplReservationService implements IReservationService {
 
     @Override
-    public void reserveInventory(Cart cart) throws Exception {
-        for(OrderItem item : cart.getItems())
+    public void reserveInventory(Iterable<OrderItem> items) throws Exception {
+        for(OrderItem item : items)
         {
             try
             {
@@ -28,4 +28,5 @@ public class ImplReservationService implements IReservationService {
             }
         }
     }
+
 }

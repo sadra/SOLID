@@ -9,6 +9,6 @@ public abstract class Order {
         this.cart = cart;
     }
 
-    public abstract void checkout() throws Exception ;
+    public abstract void checkout() throws Exception;
 
 }

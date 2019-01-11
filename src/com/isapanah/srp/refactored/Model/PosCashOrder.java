@@ -8,6 +8,7 @@ public class PosCashOrder extends Order {
 
     @Override
     public void checkout() throws Exception {
+        //TODO save order record on database
     }
 
 }

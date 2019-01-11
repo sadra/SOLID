@@ -10,7 +10,7 @@ import com.isapanah.srp.refactored.Model.PaymentDetails;
 public class ImplPaymentProcessor implements IPaymentProcessor {
 
     @Override
-    public void processCreditCard(PaymentDetails paymentDetails, Cart cart) throws Exception {
+    public void processCreditCard(PaymentDetails paymentDetails, float amount) throws Exception {
         PaymentGateway paymentGateway = new PaymentGateway();
 
         try
@@ -20,7 +20,7 @@ public class ImplPaymentProcessor implements IPaymentProcessor {
             paymentGateway.expiresMonth = paymentDetails.getExpiresMonth();
             paymentGateway.expiresYear = paymentDetails.getExpiresYear();
             paymentGateway.nameOnCard = paymentDetails.getCardholderName();
-            paymentGateway.amountToCharge = cart.getTotalAmount();
+            paymentGateway.amountToCharge = amount;
 
             paymentGateway.Charge();
         }

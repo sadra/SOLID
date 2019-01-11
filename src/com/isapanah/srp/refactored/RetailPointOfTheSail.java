@@ -9,17 +9,20 @@ public class RetailPointOfTheSail {
     public RetailPointOfTheSail(
             Cart cart,
             PaymentDetails paymentDetails,
-            PaymentDetails.PaymentMethod paymentMethod)
-            throws Exception {
+            PaymentDetails.PaymentMethod paymentMethod
+    ) throws Exception {
+
+        Order order;
 
         if(paymentMethod == Cash){
-            PosCashOrder order = new PosCashOrder(cart);
-            order.checkout();
+            order = new PosCashOrder(cart);
         }else{
-            PosCreditOrder order = new PosCreditOrder(cart, paymentDetails);
-            order.checkout();
+            order = new PosCreditOrder(cart, paymentDetails);
         }
+
+        order.checkout();
 
     }
 
 }
+

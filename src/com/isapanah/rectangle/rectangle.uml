@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="103.875" y="0.0">com.isapanah.rectangle.GUI</node>
+    <node x="0.0" y="204.0">com.isapanah.rectangle.GraphicalApplication</node>
+    <node x="197.0" y="204.0">com.isapanah.rectangle.GeometryService</node>
+    <node x="161.5" y="80.0">com.isapanah.rectangle.Rectangle</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.isapanah.rectangle.GraphicalApplication" target="com.isapanah.rectangle.Rectangle">
+      <point x="44.25" y="-15.0" />
+      <point x="132.75" y="179.0" />
+      <point x="199.0" y="179.0" />
+      <point x="-37.5" y="37.0" />
+    </edge>
+    <edge source="com.isapanah.rectangle.GraphicalApplication" target="com.isapanah.rectangle.GUI">
+      <point x="-44.25" y="-15.0" />
+      <point x="44.249999999999986" y="55.0" />
+      <point x="122.125" y="55.0" />
+      <point x="-18.25" y="15.0" />
+    </edge>
+    <edge source="com.isapanah.rectangle.GeometryService" target="com.isapanah.rectangle.Rectangle">
+      <point x="0.0" y="-15.0" />
+      <point x="37.5" y="37.0" />
+    </edge>
+    <edge source="com.isapanah.rectangle.Rectangle" target="com.isapanah.rectangle.GUI">
+      <point x="0.0" y="-37.0" />
+      <point x="236.5" y="55.0" />
+      <point x="158.625" y="55.0" />
+      <point x="18.25" y="15.0" />
+    </edge>
+  </edges>
+  <settings layout="Tree" zoom="1.0" x="0.0" y="0.0" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

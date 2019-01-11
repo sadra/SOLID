@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.isapanah.srp.raw.WebSite</OriginalElement>
+  <nodes>
+    <node x="111.53971103286835" y="0.0">com.isapanah.srp.raw.RetailPointOfTheSail</node>
+    <node x="105.43777389448296" y="610.7321544738046">com.isapanah.srp.raw.WebSite</node>
+    <node x="-225.0" y="279.1244212112938">com.isapanah.srp.raw.Model.Order</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.isapanah.srp.raw.WebSite" target="com.isapanah.srp.raw.Model.Order">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="com.isapanah.srp.raw.RetailPointOfTheSail" target="com.isapanah.srp.raw.Model.Order">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+  </edges>
+  <settings layout="Circular" zoom="1.0" x="176.0" y="320.5" />
+  <SelectedNodes>
+    <node>com.isapanah.srp.raw.Model.Order</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

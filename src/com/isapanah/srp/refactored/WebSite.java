@@ -7,8 +7,7 @@ import com.isapanah.srp.refactored.Model.PaymentDetails;
 public class WebSite {
 
     public WebSite(Cart cart, PaymentDetails paymentDetails) throws Exception {
-        OnlineOrder order = new OnlineOrder(cart, paymentDetails);
-        order.checkout();
+        new OnlineOrder(cart, paymentDetails).checkout();
     }
 
 }

@@ -17,5 +17,6 @@ public class PosCreditOrder extends Order {
     @Override
     public void checkout() throws Exception {
         paymentProcessor.processCreditCard(paymentDetails, cart.getTotalAmount());
+        //TODO save order record on database
     }
 }
