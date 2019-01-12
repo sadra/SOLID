@@ -1,12 +1,12 @@
-package com.isapanah.ocp.raw.Model;
+package com.isapanah.ocp.raw;
 
+import com.isapanah.ocp.raw.Cart;
+import com.isapanah.ocp.raw.OrderItem;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
-public class RawCartTest {
+public class CartTest {
 
     private Cart cart;
 

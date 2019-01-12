@@ -1,4 +1,4 @@
-package com.isapanah.ocp.raw.Model;
+package com.isapanah.ocp.refactored;
 
 public class OrderItem {
 
