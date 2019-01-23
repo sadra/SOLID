@@ -1,15 +1,18 @@
-package com.isapanah.srp.refactored.Implementations;
+package com.isapanah.dip.refactored.Implementations;
 
-import com.isapanah.srp.refactored.Services.PaymentGateway;
-import com.isapanah.srp.refactored.Utility.Exceptions.AvsMismatchException;
+import com.isapanah.dip.refactored.Interfaces.IPaymentProcess;
+import com.isapanah.dip.refactored.Model.Cart;
+import com.isapanah.dip.refactored.Model.PaymentDetails;
+import com.isapanah.dip.refactored.Services.PaymentGateway;
+import com.isapanah.dip.refactored.Utility.Exceptions.AvsMismatchException;
 import com.isapanah.srp.refactored.Utility.Exceptions.OrderException;
-import com.isapanah.srp.refactored.Interfaces.IPaymentProcessor;
-import com.isapanah.srp.refactored.Model.PaymentDetails;
 
-public class ImplPaymentProcessor implements IPaymentProcessor {
-
+public class PaymentProcessService implements IPaymentProcess
+{
     @Override
-    public void processCreditCard(PaymentDetails paymentDetails, float amount) throws Exception {
+    public void processPayment(
+            PaymentDetails paymentDetails, Cart cart) throws Exception
+    {
         PaymentGateway paymentGateway = new PaymentGateway();
 
         try
@@ -19,13 +22,13 @@ public class ImplPaymentProcessor implements IPaymentProcessor {
             paymentGateway.expiresMonth = paymentDetails.getExpiresMonth();
             paymentGateway.expiresYear = paymentDetails.getExpiresYear();
             paymentGateway.nameOnCard = paymentDetails.getCardholderName();
-            paymentGateway.amountToCharge = amount;
+            paymentGateway.amountToCharge = cart.getTotalAmount();
 
             paymentGateway.Charge();
         }
         catch (AvsMismatchException ex)
         {
-            throw new OrderException("The card gateway rejected the card based on the address provided.", ex);
+            throw new AvsMismatchException("The card gateway rejected the card based on the address provided.", ex);
         }
         catch (Exception ex)
         {

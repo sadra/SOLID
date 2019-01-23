@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.isapanah.dip.raw.Utility.Logger</OriginalElement>
+  <nodes>
+    <node x="0.0" y="383.0">com.isapanah.dip.raw.Model.Cart</node>
+    <node x="243.0" y="590.0">com.isapanah.dip.raw.Services.InventorySystem</node>
+    <node x="0.0" y="590.0">com.isapanah.dip.raw.Model.OrderItem</node>
+    <node x="0.0" y="0.0">com.isapanah.dip.raw.Services.PaymentGateway</node>
+    <node x="311.0" y="0.0">com.isapanah.dip.raw.Model.PaymentDetails</node>
+    <node x="329.0" y="383.0">com.isapanah.dip.raw.Model.Order</node>
+  </nodes>
+  <notes />
+  <edges />
+  <settings layout="Tree" zoom="1.0" x="443.0" y="337.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

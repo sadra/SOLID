@@ -1,31 +1,30 @@
-package com.isapanah.srp.raw.Model;
+package com.isapanah.dip.raw.Model;
 
-import com.isapanah.srp.raw.Modules.mailMessage;
-import com.isapanah.srp.raw.Modules.SmtpClient;
-import com.isapanah.srp.raw.Services.InventorySystem;
-import com.isapanah.srp.raw.Services.PaymentGateway;
-import com.isapanah.srp.raw.Utility.Exceptions.AvsMismatchException;
-import com.isapanah.srp.raw.Utility.Exceptions.InsufficientInventoryException;
-import com.isapanah.srp.raw.Utility.Logger;
-import com.isapanah.srp.raw.Utility.Exceptions.orderException;
+import com.isapanah.dip.raw.Services.InventorySystem;
+import com.isapanah.dip.raw.Services.PaymentGateway;
+import com.isapanah.dip.raw.Utility.Exceptions.AvsMismatchException;
+import com.isapanah.dip.raw.Utility.Exceptions.InsufficientInventoryException;
+import com.isapanah.dip.raw.Utility.Exceptions.orderException;
+import com.isapanah.dip.raw.Utility.Logger;
 
-import javax.mail.Message;
-import javax.mail.Session;
-import javax.mail.Transport;
-import javax.mail.internet.InternetAddress;
-import javax.mail.internet.MimeMessage;
 import java.util.Date;
 import java.util.Properties;
 
-import static com.isapanah.srp.raw.Model.PaymentDetails.PaymentMethod.*;
+import java.util.*;
+import javax.mail.*;
+import javax.mail.internet.*;
+import javax.activation.*;
 
-public class Order {
+import static com.isapanah.dip.raw.Model.PaymentDetails.PaymentMethod.CreditCard;
 
+
+public class Order
+{
     public void checkout(Cart cart, PaymentDetails paymentDetails, boolean notifyCustomer) throws Exception
     {
         if (paymentDetails.getPaymentMethod() == CreditCard)
         {
-            chargeCard(paymentDetails, cart);
+            processPayment(paymentDetails, cart);
         }
 
         reserveInventory(cart);
@@ -36,7 +35,7 @@ public class Order {
         }
     }
 
-    private void notifyCustomer(Cart cart)
+    private void notifyCustomer(Cart cart) throws Exception
     {
         String customerEmail = cart.getCustomerEmail();
         if (!customerEmail.isEmpty())
@@ -62,7 +61,7 @@ public class Order {
             }
             catch (Exception ex)
             {
-                Logger.error("Problem sending notification email", ex);
+                throw new Exception("Problem sending notification email"+ex);
             }
         }
     }
@@ -78,7 +77,7 @@ public class Order {
             }
             catch (InsufficientInventoryException ex)
             {
-                throw new orderException("Insufficient inventory for item " + item.getSku(), ex);
+                throw new orderException("Insufficient inventory for item "+item.getSku(),ex);
             }
             catch (Exception ex)
             {
@@ -87,7 +86,7 @@ public class Order {
         }
     }
 
-    private void chargeCard(PaymentDetails paymentDetails, Cart cart) throws Exception
+    private void processPayment(PaymentDetails paymentDetails, Cart cart) throws Exception
     {
         PaymentGateway paymentGateway = new PaymentGateway();
 
@@ -110,7 +109,5 @@ public class Order {
         {
             throw new orderException("There was a problem with your card.", ex);
         }
-
     }
-
 }

@@ -1,8 +1,8 @@
-package com.isapanah.srp.refactored.Implementations;
+package com.isapanah.dip.refactored.Implementations;
 
-import com.isapanah.srp.refactored.Utility.Logger;
-import com.isapanah.srp.refactored.Interfaces.INotificationService;
-import com.isapanah.srp.refactored.Model.Cart;
+import com.isapanah.dip.refactored.Interfaces.INotification;
+import com.isapanah.dip.refactored.Model.Cart;
+import com.isapanah.srp.refactored.Utility.Exceptions.OrderException;
 
 import javax.mail.Message;
 import javax.mail.Session;
@@ -12,10 +12,10 @@ import javax.mail.internet.MimeMessage;
 import java.util.Date;
 import java.util.Properties;
 
-public class ImplNotificationService implements INotificationService
+public class NotificationService implements INotification
 {
     @Override
-    public void notifyCustomerOrderCreated(Cart cart) {
+    public void notifyCustomer(Cart cart) throws Exception {
         String customerEmail = cart.getCustomerEmail();
         if (!customerEmail.isEmpty())
         {
@@ -40,7 +40,7 @@ public class ImplNotificationService implements INotificationService
             }
             catch (Exception ex)
             {
-                Logger.error("Problem sending notification email", ex);
+                throw new OrderException("Problem sending notification email", ex);
             }
         }
     }
