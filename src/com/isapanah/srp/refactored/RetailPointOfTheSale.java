@@ -4,9 +4,9 @@ import com.isapanah.srp.refactored.Model.*;
 
 import static com.isapanah.srp.refactored.Model.PaymentDetails.PaymentMethod.*;
 
-public class RetailPointOfTheSail {
+public class RetailPointOfTheSale {
 
-    public RetailPointOfTheSail(
+    public RetailPointOfTheSale(
             Cart cart,
             PaymentDetails paymentDetails,
             PaymentDetails.PaymentMethod paymentMethod

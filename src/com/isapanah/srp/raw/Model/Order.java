@@ -1,7 +1,5 @@
 package com.isapanah.srp.raw.Model;
 
-import com.isapanah.srp.raw.Modules.mailMessage;
-import com.isapanah.srp.raw.Modules.SmtpClient;
 import com.isapanah.srp.raw.Services.InventorySystem;
 import com.isapanah.srp.raw.Services.PaymentGateway;
 import com.isapanah.srp.raw.Utility.Exceptions.AvsMismatchException;
