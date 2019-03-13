@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="">
+	<!--Tittle-->
+	<title>کتاب پنچ اصل SOLID</title>
+	<!--Bootstrap and Other Vendors CSS-->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/prettyPhoto.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<!--main CSS-->
+	<link rel="stylesheet" href="css/style.css">
+	<!--Google Fonts-->
+	<link href="https://fonts.googleapis.com/css?family=Dosis:400,500,600,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+	<!-- Favicon and Apple Icons -->
+	<link rel="icon" type="image/png" href="img/favicon.png">
+	<!--[if lt IE 9]>
+        <script src="js/html5shiv.min.js"></script>
+        <script src="js/respond.min.js"></script>
+      <![endif]-->
+</head>
+<!--/head-->
+
+<body data-spy="scroll" data-target="#navigation">
+<div id="preloader"></div>
+	<!-- #navigation -->
+	<header id="navigation">
+		<div class="navbar main-nav" role="banner">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#navigation">
+						<img class="img-responsive" src="img/logo.png" alt="logo">
+					</a>
+				</div>
+				<nav class="collapse navbar-collapse navbar-left">
+					<ul class="nav navbar-nav">
+						<li><a class="page-scroll" href="#pricing-table">خرید کتاب</a>
+						</li>
+						<li><a class="page-scroll" href="#preview">پیش نمایش</a>
+						</li>
+						<li><a class="page-scroll" href="#about-book-image">درباره‌ی کتاب</a>
+						</li>
+						<li><a class="page-scroll" href="#testimonial">نظرات</a>
+						</li>
+						<li><a class="page-scroll" href="#about-author">نویسنده</a>
+						</li>
+						<li><a class="page-scroll" href="#contact-form">تماس</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
+	<!--/#navigation-->
+	<!--#top-banner-->
+	<section id="top-banner">
+		<div class="top-banner-overlay"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-7 col-md-6 wow fadeIn top-banner-book-preview-description" data-wow-delay="300ms">
+					<h1>پنج اصل SOLID</h1>
+
+					<p>
+						اگر احساس می کنید در نوشتن یک برنامه گیر کرده اید، این نکته را در نظر بگیرید که آموزش سنتی متداول، ممکن است شما را برای ورود به دنیای توسعه نرم افزار و برنامه نویسی آماده نکرده باشد.
+						<br/>
+						ممکن است با سال‌ها برنامه‌نویسی و تمرین با موارد و سوژه‌های مختلف آشنا شوید، اما بدون دانستن اصول، قوائد و مفاهیم اصلی، هرگز نخواهید توانست آن بینش لازم جهت توسعه‌ی یک نرم افزار مطلوب را  بدست آورید.
+						<br/>
+						یکی از آن مفاهیم اصولی و ضروری در طراحی شئ گرا، پنج اصل SOLID است. این کتاب به همراه توضیحات، نکات و مثال‌های فراوان کمک می‌کند تا با اصول SOLID آشنا شده و آن بینش لازم جهت توسعه‌ی اصولی برنامه‌ها‌ی نرم افزاری را کسب کنید.
+					</p>
+
+					<a class="btn btn-primary" href="#pricing-table"> <i class="fa fa-usd" aria-hidden="true"></i>خرید کتاب</a>
+					<a class="btn btn-primary second-btn" href="#subscribe"> <i class="fa fa-download" aria-hidden="true"></i>نسخه رایگان</a>
+				</div>
+				<div class="col-sm-5 col-md-6 text-center wow zoomIn" data-wow-delay="300ms">
+					<img class="img-responsive center-block" src="img/header-img-2.png" alt="">
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--/#top-banner-->
+	<!--#preview-->
+	<section id="preview" class="section-padding">
+		<div class="container">
+			<div class="section-title text-center">
+				<h2>پیش نمایش</h2>
+				<h3>پیش از خرید یا دانلود، پیش نمایش فصل‌ها را ببینید</h3>
+			</div>
+			<div class="row">
+				<div class="col-sm-9">
+					<div class="preview-carousel owl-carousel owl-theme">
+						<div class="item preview-page">
+							<a href="img/book-preview/page-1.jpg" rel="prettyPhoto">
+								<img class="img-responsive center-block" src="img/book-preview/page-1.jpg" alt="">
+							</a>
+						</div>
+						<div class="item preview-page">
+							<a href="img/book-preview/page-2.jpg" rel="prettyPhoto">
+								<img class="img-responsive center-block" src="img/book-preview/page-2.jpg" alt="">
+							</a>
+						</div>
+						<div class="item preview-page">
+							<a href="img/book-preview/page-3.jpg" rel="prettyPhoto">
+								<img class="img-responsive center-block" src="img/book-preview/page-3.jpg" alt="">
+							</a>
+						</div>
+						<div class="item preview-page">
+							<a href="img/book-preview/page-4.jpg" rel="prettyPhoto">
+								<img class="img-responsive center-block" src="img/book-preview/page-4.jpg" alt="">
+							</a>
+						</div>
+						<div class="item preview-page">
+							<a href="img/book-preview/page-5.jpg" rel="prettyPhoto">
+								<img class="img-responsive center-block" src="img/book-preview/page-5.jpg" alt="">
+							</a>
+						</div>
+						<div class="item preview-page">
+							<a href="img/book-preview/page-6.jpg" rel="prettyPhoto">
+								<img class="img-responsive center-block" src="img/book-preview/page-6.jpg" alt="">
+							</a>
+						</div>
+						<div class="item preview-page">
+							<a href="img/book-preview/page-7.jpg" rel="prettyPhoto">
+								<img class="img-responsive center-block" src="img/book-preview/page-7.jpg" alt="">
+							</a>
+						</div>
+						<div class="item preview-page">
+							<a href="img/book-preview/page-8.jpg" rel="prettyPhoto">
+								<img class="img-responsive center-block" src="img/book-preview/page-8.jpg" alt="">
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-3 download-sample-box vertical-center">
+					<h3>دریافت نمونه‌ی کتاب</h3>
+					<p>
+						نمونه‌ی کتاب شامل فهرست، فصل مقدمات و بخشهای از فصل‌های دیگر است.
+					</p> <a href="#subscribe" class="btn btn-primary">دانلود</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--#/preview-->
+	<!--#about-book-image-->
+	<section id="about-book-image" class="section-padding">
+		<div class="container">
+			<div class="section-title text-center">
+				<h2>درباره‌ی‌ این کتاب</h2>
+				<h3>Lorem ipsum dolor sit amet consectetur</h3>
+			</div>
+			<div class="row">
+				<div class="col-sm-5 col-sm-offset-1 padding-bottom-30 wow fadeInLeft" data-wow-delay="300ms">
+					<img class="img-responsive center-block" src="img/about-img-2.png" alt="">
+				</div>
+				<div class="col-sm-5 wow fadeIn" data-wow-delay="300ms">
+					<div class="about-right">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+						<h3>Benefits Of Book</h3>
+						<ul class="list-unstyled about-book-list">
+							<li> <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+							</li>
+							<li> <i class="fa fa-file-text-o" aria-hidden="true"></i>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+							</li>
+							<li> <i class="fa fa-external-link" aria-hidden="true"></i>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+							</li>
+							<li> <i class="fa fa-folder-open-o" aria-hidden="true"></i>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+							</li>
+							<li> <i class="fa fa-comments-o" aria-hidden="true"></i>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--/#about-book-image-->
+	<!--#buy-now-->
+	<section id="buy-now" class="text-center parallax-section">
+		<div class="overlay"></div>
+		<div class="parallax-content">
+			<div class="container">
+				<h2>جای این کتاب تو کتابخونه‌ی شما خالیه</h2>
+				<p>همین حالا این کتاب رو سفارش بده</p> <a class="btn btn-default wow fadeInUp" data-wow-delay="300ms" href="#pricing-table">خرید کتاب<i class="fa fa-angle-double-left"></i></a>
+			</div>
+		</div>
+	</section>
+	<!--/#buy-now-->
+	<!--#pricing-table-->
+	<section id="pricing-table" class="section-padding">
+		<div class="container">
+			<div class="section-title text-center">
+				<h2>خرید کتاب</h2>
+				<h3>با خرید نسخه الکترونیکی به محیط زیست کمک کنیم</h3>
+			</div>
+			<div class="row">
+				<div class="col-sm-4 col-md-3 wow zoomIn" data-wow-delay="300ms">
+					<div class="single-table">
+						<h2><i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+							نسخه‌ی الکترونیکی
+						</h2>
+						<p class="price">۱۲ هزارتومان</p>
+						<ul class="list-unstyled">
+							<li><i class="fa fa-check"></i>کتاب کامل</li>
+							<li><i class="fa fa-close"></i>با فرمت PDF</li>
+							<li><i class="fa fa-close"></i>ارسال فایل به ایمیل شما</li>
+						</ul> <a href="#" class="table-buynow">خرید</a>
+					</div>
+				</div>
+				<div class="col-sm-4 col-md-3 wow zoomIn" data-wow-delay="300ms">
+					<div class="single-table feature-table">
+						<h2><i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+							<i class="fa fa-book" aria-hidden="true"></i>
+							نسخه‌ی پکیج
+						</h2>
+						<p class="price">۳۵ هزارتومان</p>
+						<ul class="list-unstyled">
+							<li><i class="fa fa-check"></i>کتاب کامل</li>
+							<li><i class="fa fa-check"></i>نسخه‌ی چاپی با صفحات رنگی</li>
+							<li><i class="fa fa-check"></i>کاغذ تحریر و جلد شومیز</li>
+							<li><i class="fa fa-check"></i>نسخه‌ی الکترونیکی PDF</li>
+							<li><i class="fa fa-check"></i>ارسال فایل به ایمیل شما</li>
+						</ul> <a href="#" class="table-buynow">خرید</a>
+					</div>
+				</div>
+				<div class="col-sm-4 col-md-3 wow zoomIn" data-wow-delay="300ms">
+					<div class="single-table">
+						<h2><i class="fa fa-book" aria-hidden="true"></i>
+							نسخه‌ی چاپی
+						</h2>
+						<p class="price">۲۷ هزارتومان</p>
+						<ul class="list-unstyled">
+							<li><i class="fa fa-check"></i>کتاب کامل</li>
+							<li><i class="fa fa-check"></i>نسخه‌ی چاپی با صفحات رنگی</li>
+							<li><i class="fa fa-check"></i>کاغذ تحریر و جلد شومیز</li>
+						</ul> <a href="#" class="table-buynow">خرید</a>
+					</div>
+				</div>
+				<div class="col-sm-12 col-md-3 download-sample-box vertical-center">
+					<h3>کتاب رو تو چه فرمتی می‌خواین؟</h3>
+					<p>زمان ارسال: کتاب‌های چاپی به صورت رایگان فردای روزِ سفارش از طریق پست ارسال می‌شن. زمان رسیدن بسته از یک روز تا ۴ روز ممکن هست طول بکشه. در ضمن سفارش‌های چهارشنبه تا جمعه‌ی هر هفته، شنبه‌ی هفته‌ی بعد اون ارسال می‌شن.</p>
+					<p>نسخه‌ی الکترونیک کتاب، بلافاصله بعد از خرید، با فرمت‌ pdf براتون ایمیل میشه.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--#/pricing-table-->
+	<!--#subscribe-->
+	<section id="subscribe" class="text-center parallax-section">
+		<div class="overlay"></div>
+		<div class="parallax-content">
+			<div class="container">
+				<h2>یک فصل رایگان مهمان ما باشید</h2>
+				<p>بهمون اعتماد کنید، هیچوقت براتون اسپم نمی‌فرستیم</p>
+				<div class="row">
+					<div class="col-sm-10 col-sm-offset-1">
+						<div class="news-letter">
+							<form id="newsletter" action="http://yourlist.us6.list-manage.com/subscribe/post-json?u=demo" method="get">
+								<div class="row">
+									<div class="col-sm-4">
+										<button type="submit" class="btn btn-default">ثبت<i class="fa fa-angle-double-left"></i>
+										</button>
+									</div>
+									<div class="col-sm-4">
+										<input placeholder="ایمیل شما" name="newsletter-email" type="email" required>
+									</div>
+									<div class="col-sm-4">
+										<input placeholder="نام شما" name="newsletter-name" type="text" required>
+									</div>
+								</div>
+								<div class="row">
+									<div id="subscribe-result"></div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--#/subscribe-->
+	<!--#testimonial-->
+	<section id="testimonial" class="section-padding">
+		<div class="container">
+			<div class="section-title text-center">
+				<h2>نظرات</h2>
+				<h3>بقیه راجع به این کتاب چه نظری دارند</h3>
+			</div>
+			<div class="carousel slide" data-ride="carousel" id="quote-carousel">
+				<!-- Carousel Slides / Quotes -->
+				<div class="carousel-inner text-center">
+					<!-- Quote 1 -->
+					<div class="item active">
+						<blockquote>
+							<div class="row">
+								<div class="col-sm-8 col-sm-offset-2">
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> <strong>Jhon Doe</strong>
+									<small>CEO,ENVATO</small>
+								</div>
+							</div>
+						</blockquote>
+					</div>
+					<!-- Quote 2 -->
+					<div class="item">
+						<blockquote>
+							<div class="row">
+								<div class="col-sm-8 col-sm-offset-2">
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> <strong>Jhon Doe</strong>
+									<small>CEO,ENVATO</small>
+								</div>
+							</div>
+						</blockquote>
+					</div>
+					<!-- Quote 3 -->
+					<div class="item">
+						<blockquote>
+							<div class="row">
+								<div class="col-sm-8 col-sm-offset-2">
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> <strong>Jhon Doe</strong>
+									<small>CEO,ENVATO</small>
+								</div>
+							</div>
+						</blockquote>
+					</div>
+				</div>
+				<!-- Bottom Carousel Indicators -->
+				<ol class="carousel-indicators who-testimonial-headers">
+					<li data-target="#quote-carousel" data-slide-to="0" class="active">
+						<img class="img-responsive " src="img/testimonial/img-1.jpg" alt="">
+					</li>
+					<li data-target="#quote-carousel" data-slide-to="1">
+						<img class="img-responsive" src="img/testimonial/img-2.jpg" alt="">
+					</li>
+					<li data-target="#quote-carousel" data-slide-to="2">
+						<img class="img-responsive" src="img/testimonial/img-3.jpg" alt="">
+					</li>
+				</ol>
+			</div>
+		</div>
+	</section>
+	<!--/#testimonial-->
+	<!--#about-author-->
+	<section id="about-author" class="section-padding">
+		<div class="container">
+			<div class="section-title text-center">
+				<h2>درباره‌ی نویسنده</h2>
+				<h3>درباره‌ی من بیشتر بدونید</h3>
+			</div>
+			<div class="row">
+				<div class="col-sm-6 col-md-5 padding-bottom-30">
+					<h2>رحمت (صدرا) عیسی پناه املشی</h2>
+					<p>خیلی‌ها من رو با اسم صدرا میشناسن، و البته توی اکثر شبکه‌های اجتماعی من رو می‌تونید با همین اسم پیدا کنید. حدود ۸ ساله برنامه‌نویسی می‌کنم و با زبون‌ها و فریم‌ورک‌های مختلفی کار کردم. علاقه من به نوشتن از وبلاگم شروع شد و الان حدود ۳ ساله که بطور موردی درمورد دغدغه‌هام در برنامه نویسی مسائل مربوط به اون می‌نویسم.</p>
+					<p> من براي یادگیري و فهم اصول SOLID به منابع مختلفی رجوع کردم؛ از ویدئوها و کتاب‌های آنكل باب (که مطرح کننده این مفهوم است) گرفته تا سایتها و مقاله‌های مختلفی که روی اینترنت میشه بهشون رسید. کتاب پیش‌رو حاصل تلاش من در گردآوری و ارائه‌ی این مفاهیم به صورت ساده و در دسترسه. به پیروی از <i>سایه</i> (هوشنگ ابتهاج) اسم این کتاب هم «سالید به سعی صدرا» ست. امیدوارم که حق مطلب رو تونسته باشم ادا کنم.</p>
+					<p>اگه سوال یا نظری راجع به کتاب داشتین، اصلا سخت نگیرین. فقط کافیه از طریق یکی از روش‌های زیر بهم پیام بدین.</p>
+					<img src="img/author/signature-1.png" class="img-responsive" alt="signature" style="height: 100px; margin: auto auto">
+					<ul class="author-social-links">
+						<li><a href="https://twitter.com/sadra_amlashi" target="_blank"><i class="fa fa-twitter"></i></a>
+						</li>
+						<li><a href="https://facebook.com/sadra.am123" target="_blank"><i class="fa fa-facebook"></i></a>
+						</li>
+						<li><a href="https://t.me/Amlashi" target="_blank"><i class="fab fa-telegram"></i></a>
+						</li>
+						<li><a href="https://www.linkedin.com/in/amlashisadra/" target="_blank"><i class="fa fa-linkedin"></i></a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-sm-6 col-md-7">
+					<img class="img-author img-responsive center-block grayscale" src="img/author/author.jpg" alt="Author-photo">
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--/#about-author-->
+	<!--#contact-->
+	<Section id="contact-form" class="section-padding">
+		<div class="container">
+			<div class="section-title text-center">
+				<h2>تماس</h2>
+				<h4>
+					اگه در مورد خرید کتاب سوالی دارین یا می‌خواین سفارش‌تون رو پی‌گیری کنین و یا شاید دوست دارین با ما به هر شکلی همکاری کنین و شاید فقط دوست داشته باشین یه سلام علیکی باهم بکنیم، در هر صورت خوشحال می‌شیم که به هر یک از روش‌های زیر که دوست دارین باهم در تماس باشیم تا هر کمکی از دست‌مون برمیاد انجام بدیم. به هم‌صحبتی با شما افتخار کنیم.
+				</h4>
+			</div>
+			<div class="row">
+				<div class="col-sm-10 col-sm-offset-1">
+					<form id="contact" class="contact-form">
+						<!-- IF MAIL SENT SUCCESSFULLY -->
+						<h4 class="success">
+                           <i class="fa fa-check-square-o" aria-hidden="true"></i> پیام شما با موفقیت ارسال شد
+                        </h4>
+						<!-- IF MAIL SENDING UNSUCCESSFULL -->
+						<h4 class="error">
+                           <i class="fa fa-times" aria-hidden="true"></i> فرمت ایمیل را بررسی کنید.
+                        </h4>
+						<div class="row">
+							<div class="col-sm-6">
+								<div class="form-group">
+									<input name="name" class="form-control" required="required" placeholder="نام" type="text">
+								</div>
+								<div class="form-group">
+									<input name="email" id="email" class="form-control" required="required" placeholder="ایمیل" type="email">
+								</div>
+								<div class="form-group">
+									<input name="subject" id="subject" class="form-control" required="required" placeholder="موضوع" type="text">
+								</div>
+							</div>
+							<div class="col-sm-6">
+								<div class="form-group">
+									<textarea name="message" id="message" required="required" class="form-control" rows="7" placeholder="متن پیام"></textarea>
+								</div>
+							</div>
+						</div>
+						<div class="form-group text-center">
+							<button type="submit" name="submit" id="submit" class="btn btn-primary"><i class="fa fa-paper-plane-o" aria-hidden="true"></i> ارسال پیام</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--/#contact-->
+	<!--#footer-->
+	<footer id="footer">
+		<div class="container">
+			<div class="footer-logo text-center">
+				<img class="responsive-img" src="img/logo.png" alt="" style="width: 126px; height: 126px">
+			</div>
+			<ul class="social-links text-center">
+				<li><a href="https://twitter.com/sadra_amlashi" target="_blank"><i class="fa fa-twitter"></i></a>
+				</li>
+				<li><a href="https://facebook.com/sadra.am123" target="_blank"><i class="fa fa-facebook"></i></a>
+				</li>
+				<li><a href="https://t.me/Amlashi" target="_blank"><i class="fab fa-telegram"></i></a>
+				</li>
+				<li><a href="https://www.linkedin.com/in/amlashisadra/" target="_blank"><i class="fa fa-linkedin"></i></a>
+				</li>
+			</ul>
+			<div class="row">
+				<div class="col-sm-6">
+					<p class="copyright text-left">با همکاری نشر <a href="http://www.naghoospress.ir/">ناقوس</a>
+					</p>
+				</div>
+				<div class="col-sm-6">
+					<p class="copyright text-right">تمامی حقوق این وبسایت محفوظ است.</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!--/#footer-->
+	<!-- Go To Top Link --> 
+	<a href="#" class="back-to-top"><i class="fa fa-chevron-up "></i></a>
+	<!-- /Go To Top Link -->
+	<!--Script-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script>
+		window.jQuery || document.write('<script src="js/jquery.js"><\/script>')
+	</script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/wow.min.js"></script>
+	<script src="js/jquery.parallax.js"></script>
+	<script src="js/jquery.inview.min.js"></script>
+	<script src="js/jquery.countTo.js"></script>
+	<script src="js/jquery.prettyPhoto.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.easing.min.js"></script>
+	<script src="js/smoothscroll.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+
+</html>
