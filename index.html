@@ -219,7 +219,7 @@
 							نسخه‌ی الکترونیکی
 						</h2>
 						<p class="price">۱۰ هزارتومان</p>
-						<p class="price discounted"><strike> 15 هزارتومان </strike></p>
+						<p class="price discounted"><strike> ۱۵ هزارتومان </strike></p>
 						<ul class="list-unstyled">
 							<li><i class="fa fa-check"></i>کتاب کامل</li>
 							<li><i class="fa fa-check"></i>با فرمت PDF</li>
@@ -276,12 +276,14 @@
 				<p>بهمون اعتماد کنید، هیچوقت براتون اسپم نمی‌فرستیم</p>
 				<div class="row">
 					<div class="col-sm-10 col-sm-offset-1">
-						<div class="news-letter">
-							<form id="newsletter" action="http://yourlist.us6.list-manage.com/subscribe/post-json?u=demo" method="get">
+						<div class="news-letter" id="newsletter-container">
+							<form id="newsletter">
 								<div class="row">
 									<div class="col-sm-4">
-										<button type="submit" class="btn btn-default">ثبت<i class="fa fa-angle-double-left"></i>
-										</button>
+										<select class="select" id="season-select">
+											<option value="season-3">اصل سوم - Liskov Substitution</option>
+											<option value="season-4">اصل چهارم - Interface Segregation</option>
+										</select>
 									</div>
 									<div class="col-sm-4">
 										<input placeholder="ایمیل شما" name="newsletter-email" type="email" required>
@@ -291,9 +293,19 @@
 									</div>
 								</div>
 								<div class="row">
+									<button type="button" onclick="subscribeUser()" class="btn btn-default">ثبت<i class="fa fa-angle-double-left"></i>
+									</button>
 									<div id="subscribe-result"></div>
 								</div>
 							</form>
+							<!--warning-->
+							<div class="alert alert-warning" style="display: none" id="newsletter-form-input">
+								<br/><strong>لطفا ورودی‌های خود را بررسی نمایید.</strong>
+							</div>
+							<!--error-->
+							<div class="alert alert-danger" style="display: none" id="newsletter-form-error">
+								<br/><strong>متاسفانه مشکلی پیش آمد. لطفا دوباره تلاش نمایید.</strong>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -403,16 +415,8 @@
 				</h4>
 			</div>
 			<div class="row">
-				<div class="col-sm-10 col-sm-offset-1">
+				<div class="col-sm-10 col-sm-offset-1" id="contact-container">
 					<form id="contact" class="contact-form">
-						<!-- IF MAIL SENT SUCCESSFULLY -->
-						<h4 class="success">
-                           <i class="fa fa-check-square-o" aria-hidden="true"></i> پیام شما با موفقیت ارسال شد
-                        </h4>
-						<!-- IF MAIL SENDING UNSUCCESSFULL -->
-						<h4 class="error">
-                           <i class="fa fa-times" aria-hidden="true"></i> فرمت ایمیل را بررسی کنید.
-                        </h4>
 						<div class="row">
 							<div class="col-sm-6">
 								<div class="form-group">
@@ -432,9 +436,17 @@
 							</div>
 						</div>
 						<div class="form-group text-center">
-							<button type="submit" name="submit" id="submit" class="btn btn-primary"><i class="fa fa-paper-plane-o" aria-hidden="true"></i> ارسال پیام</button>
+							<button type="button" onclick="contact()" class="btn btn-primary"><i class="fa fa-paper-plane-o" aria-hidden="true"></i> ارسال پیام</button>
 						</div>
 					</form>
+					<!--warning-->
+					<div class="alert alert-warning" style="display: none" id="contact-form-input">
+						<br/><strong>لطفا ورودی‌های خود را بررسی نمایید.</strong>
+					</div>
+					<!--error-->
+					<div class="alert alert-danger" style="display: none" id="contact-form-error">
+						<br/><strong>متاسفانه مشکلی پیش آمد. لطفا دوباره تلاش نمایید.</strong>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -487,6 +499,7 @@
 	<script src="js/jquery.easing.min.js"></script>
 	<script src="js/smoothscroll.min.js"></script>
 	<script src="js/main.js"></script>
+	<script src="js/utils.js"></script>
 </body>
 
 </html>

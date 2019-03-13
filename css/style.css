@@ -593,6 +593,18 @@ h6 {
 #subscribe .btn.btn-default {
 	width: 100%;
 }
+
+.select {
+	background-color: transparent !important;
+	border: 1px solid #fff !important;
+	border-radius: 3px !important;
+	color: #FFF !important;
+	display: block !important;
+	margin-top: 35px !important;
+	padding: 12px 25px !important;
+	width: 100% !important;
+	outline: medium none !important;
+}
 /*==============================
 =======  Testimonial  ==========
 ================================*/
