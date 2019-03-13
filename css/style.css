@@ -76,7 +76,7 @@ div {
 }
 
 a {
-	color: #0088CC;
+	color: #8E24AA;
 	text-decoration: none;
 	-webkit-transition: 300ms;
 	-moz-transition: 300ms;
@@ -131,7 +131,7 @@ h6 {
 	padding-bottom: 60px;
 }
 .section-title h2 {
-	color: #0088CC;
+	color: #8E24AA;
 	font-size: 36px;
 	font-weight: 700;
 	margin-bottom: 10px;
@@ -187,7 +187,7 @@ h6 {
 	padding: 15px 50px;
 	text-transform: uppercase;
 	color: #fff;
-	background-color: #0088CC;
+	background-color: #8E24AA;
 }
 .btn.btn-default i {
 	font-size: 24px;
@@ -215,7 +215,7 @@ h6 {
 	font-weight: 700;
 	margin-top: 50px;
 	padding: 15px 25px;
-	background-color: #0088CC;
+	background-color: #8E24AA;
 	opacity: 1;
 }
 .btn.btn-primary:hover {
@@ -286,7 +286,7 @@ h6 {
 
 .callback-title li:hover a,
 .callback-title li.active a {
-	color: #0088CC !important;
+	color: #8E24AA !important;
 }
 
 .callback-title li a:hover,
@@ -296,7 +296,7 @@ h6 {
 
 .navbar-left li:hover a,
 .navbar-left li.active a {
-	color: #0088CC;
+	color: #8E24AA;
 }
 .navbar-left li a:hover,
 .navbar-left li a:focus {
@@ -318,7 +318,7 @@ h6 {
 }
 .navbar-fixed-top .navbar-left li:hover a,
 .navbar-fixed-top .navbar-left li.active a {
-	color: #0088CC;
+	color: #8E24AA;
 }
 
 .navbar-toggle {
@@ -373,7 +373,7 @@ h6 {
 	float: left;
 	width: 50px;
 	height: 60px;
-	color: #0088CC;
+	color: #8E24AA;
 	font-size: 18px;
 	overflow: hidden;
 	line-height: 60px;
@@ -382,11 +382,11 @@ h6 {
 	background-color: transparent;
 	border-radius: 3px;
 	transition: all 0.3s ease-in-out 0s;
-	border: 1px solid #0088CC;
+	border: 1px solid #8E24AA;
 }
 .feature-icon:hover {
 	color: #fff;
-	background-color: #0088CC;
+	background-color: #8E24AA;
 }
 .feature-text {
 	overflow: hidden;
@@ -394,7 +394,7 @@ h6 {
 	padding-right: 5px;
 }
 .feature-text h3 {
-	color: #0088CC;
+	color: #8E24AA;
 }
 /*========================
 ======   Preview    ======
@@ -419,7 +419,7 @@ h6 {
 	font-size: 14px;
 	margin: 5px;
 	padding: 5px 12px;
-	background: #0088CC;
+	background: #8E24AA;
 	display: inline-block;
 	cursor: pointer;
 	border-radius: 3px;
@@ -458,7 +458,7 @@ h6 {
 	margin: 20px 0;
 }
 .about-book-list li i {
-	color: #0088CC;
+	color: #8E24AA;
 	float: left;
 	font-size: 28px;
 	line-height: 25px;
@@ -482,7 +482,7 @@ h6 {
 	border-radius: 3px;
 	float: left;
 	line-height: 30px;
-	background-color: #0088CC;
+	background-color: #8E24AA;
 }
 .question {
 	margin-top: 0;
@@ -505,7 +505,7 @@ h6 {
 }
 .single-table:hover,
 .feature-table {
-	border: 1px solid #0091EA;
+	border: 1px solid #8E24AA;
 }
 .single-table h2 {
 	background-color: #F2F2F2;
@@ -557,20 +557,20 @@ h6 {
 	padding: 10px 0;
 }
 .table-buynow:hover {
-	background-color: #0088CC;
+	background-color: #8E24AA;
 	color: #fff;
 }
 .feature-table .price {
-	background-color: #0091EA;
+	background-color: #8E24AA;
 	color: #fff;
 }
 .feature-table .table-buynow {
-	background-color: #0091EA;
+	background-color: #8E24AA;
 	color: #fff;
 }
 .feature-table .table-buynow:hover {
 	background-color: #DEDEDE;
-	color: #0091EA;
+	color: #8E24AA;
 }
 /*============================
 =======  Subcribe  ===========
@@ -664,18 +664,18 @@ h6 {
 	width: 40px;
 	height: 40px;
 	line-height: 40px;
-	color: #0088CC;
+	color: #8E24AA;
 	border-radius: 3px;
 	background: transparent none repeat scroll 0% 0%;
 	position: relative;
 	transition: all 0.5s linear 0s;
 	font-size: 18px;
-	border: 1px solid #0088CC;
+	border: 1px solid #8E24AA;
 	text-align: center;
 }
 .author-social-links li a:hover {
 	color: #fff;
-	background: #0088CC none repeat scroll 0% 0%;
+	background: #8E24AA none repeat scroll 0% 0%;
 }
 #about-author .img-author {
 	height: 425px;
@@ -723,7 +723,7 @@ h6 {
 	background-color: transparent;
 }
 .form-control:focus {
-	border-color: #0088CC;
+	border-color: #8E24AA;
 	box-shadow: none;
 }
 #contact .btn.btn-primary {
@@ -740,7 +740,7 @@ h6 {
 }
 .social-links {
 	padding: 50px 0px;
-	border-bottom: 1px solid #0088CC;
+	border-bottom: 1px solid #8E24AA;
 }
 .social-links li {
 	display: inline-block;
@@ -751,17 +751,17 @@ h6 {
 	width: 50px;
 	height: 50px;
 	line-height: 50px;
-	color: #0088CC;
+	color: #8E24AA;
 	background: transparent none repeat scroll 0% 0%;
 	position: relative;
 	transition: all 0.5s linear 0s;
 	font-size: 20px;
 	border-radius: 3px;
-	border: 1px solid #0088CC;
+	border: 1px solid #8E24AA;
 }
 .social-links li a:hover {
 	color: #fff;
-	background: #0088CC none repeat scroll 0% 0%;
+	background: #8E24AA none repeat scroll 0% 0%;
 }
 .footer-menu .nav li a {
 	padding: 15px 15px 0 0;
@@ -900,14 +900,14 @@ h6 {
 		height: 50px;
 	}
 	.navbar-toggle {
-		border: 1px solid #0088CC;
+		border: 1px solid #8E24AA;
 		border-radius: 3px;
 		margin-top: 12px;
 		margin-bottom: 10px;
 		padding: 12px 12px;
 	}
 	.navbar-toggle .icon-bar {
-		background-color: #0088CC;
+		background-color: #8E24AA;
 	}
 	.navbar-collapse {
 		background-color: #111;
@@ -956,7 +956,7 @@ h6 {
 	}
 	.social-links {
 		padding: 30px 0px;
-		border-bottom: 1px solid #0088CC;
+		border-bottom: 1px solid #8E24AA;
 	}
 	.social-links li a {
 		width: 35px;
