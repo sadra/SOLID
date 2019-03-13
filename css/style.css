@@ -505,7 +505,7 @@ h6 {
 }
 .single-table:hover,
 .feature-table {
-	border: 1px solid #0088CC;
+	border: 1px solid #0091EA;
 }
 .single-table h2 {
 	background-color: #F2F2F2;
@@ -516,6 +516,12 @@ h6 {
 }
 .single-table h2 i {
 	padding-left: 5px;
+}
+.discounted{
+	background-color: #b71c1c !important;
+	color: white;
+	font-size: 24px !important;
+	font-weight: 300 !important;
 }
 .price {
 	font-size: 28px;
@@ -555,16 +561,16 @@ h6 {
 	color: #fff;
 }
 .feature-table .price {
-	background-color: #0088CC;
+	background-color: #0091EA;
 	color: #fff;
 }
 .feature-table .table-buynow {
-	background-color: #0088CC;
+	background-color: #0091EA;
 	color: #fff;
 }
 .feature-table .table-buynow:hover {
 	background-color: #DEDEDE;
-	color: #0088CC;
+	color: #0091EA;
 }
 /*============================
 =======  Subcribe  ===========
