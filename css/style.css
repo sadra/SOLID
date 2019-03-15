@@ -1077,4 +1077,8 @@ h6 {
 	direction: ltr !important;
 }
 
+.about-book-icons {
+	float: right !important;
+	margin: 10px 5px 5px 20px !important;
+}
 /*background-color: #f5f5f5;*/
