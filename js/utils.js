@@ -34,7 +34,7 @@ function sendSubscribeRequest(prams)
         .done(function( data ) {
             document.getElementById("newsletter").style.display = "none";
             $("#newsletter-container").after(
-                '<br/><div class="alert alert-success"><strong>با تشکر، فصل انتخابی به ایمیل شما ارسال شد. لطفا فولدر smap را هم چک کنید.</strong></div>'
+                '<br/><div class="alert alert-success"><strong>با تشکر، فصل انتخابی به ایمیل شما ارسال شد. لطفا فولدر spam را هم چک کنید.</strong></div>'
             )
         }).fail(function() {
             document.getElementById("newsletter-form-error").style.display = "flex";
